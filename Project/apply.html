@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
+    <title>Apply page</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 </head>
-<body>
+<body class="applybody">
     <header>
         <h2 class="Logo"><a href="index.html">InnoGear</a></h2>
         <nav class="navigation">
@@ -16,83 +16,84 @@
             <a href="jobs.html">Jobs</a>
         </nav>
     </header>
-    
-    <h1>Application Form</h1>
-    <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
-        <fieldset>
-            <legend>Please fill in the blanks</legend>
-            <label for="jrn">Job reference number</label>
-            <input type="text"  id="jrn" pattern="[a-zA-Z0-9]{5}" required placeholder="Please enter 5 characters">
-            <br>
-            <br>
-            <label for="fn">First name</label>
-            <input type="text"  id="fn" maxlength="20" required>
-            <br>
-            <br>   
-            <label for="ln">Last name</label>
-            <input type="text"  id="ln" maxlength="20" required>
-            <br>
-            <br>
-             <label for="gender-male">Male</label>
-             <input type="radio" name="gender" id="gm" value="male" required>
-             <label for="gender-female">Female</label>
-             <input type="radio" name="gender" id="gfm" value="female" required>
-             <label for="other">Other</label>
-             <input type="radio" name="gender" id="other" value="other" required>
-             <br>
-             <br>
-            <label for="dob">Date of birth</label>
-            <input type="text"  id="dob" placeholder="dd/mm/yyyy" pattern="\d{1,2}\/\d{1,2}\/\d{4}" >
-            <br>
-            <br>
-            <label for="street">Street address</label>
-            <input type="text" name="sa" id="sa" maxlength="40" required>
-            <br>
-            <br>
-            <label for="s/t">Suburb/town</label>
-            <input type="text" id="suburb" name="suburb" maxlength="40" required>
-            <br>
-            <br>
-            <label for="State">State</label>
-            <select name="state" id="state" required>
-                <option value="">Please select</option>
-                <option value="VIC">VIC</option>
-                <option value="NSW">NSW</option>
-                <option value="QLD">QLD</option>
-                <option value="NT">NT</option>
-                <option value="WA">WA</option>
-                <option value="SA">SA</option>
-                <option value="TAS">TAS</option>
-                <option value="ACT">ACT</option>
-            </select>
-            <br>
-            <br>
-            <label for="Postcode">Postcode</label>
-            <input type="text" name="PC" id="PC" pattern="[0-9]{4}" required placeholder="Please enter 4 numbervs">
-            <br>
-            <br>
-            <label for="Email">Email</label>
-            <input type="email" name="Email" id="E" required>
-            <br>
-            <br>
-            <label for="phonenumber">Phone number</label>
-            <input type="tel" name="pnb" id="pnb" pattern="[\d\-+\s]{8,12}" required>
-            <br>
-            <br>
-            <p>Please select the skills that apply to you. You can select multiple skills.</p>
-            <label for="skill-1">Skill 1</label>
-            <input type="checkbox" id="skill-1" name="skills[]" value="skill1">
-            <br>
-            <label for="skill-2">Skill 2</label>
-            <input type="checkbox" id="skill-2" name="skills[]" value="skill2">
-            <br>
-            <label for="skill-3">Skill 3</label>
-            <input type="checkbox" id="skill-3" name="skills[]" value="skill3">
-            <br>
-            <p>Other skills</p>
-            <textarea name="otherskills" id="otherskills" cols="30" rows="10" placeholder="write down here"></textarea>
-        </fieldset>
-        <input type="submit" value="Apply">
-        <input type="reset" value="Reset Form">
-    </form>
-</body>
+    <div class="Container">
+        <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+            <h2 class="h2apply">Application form</h2>
+            <div class="content">
+                <div class="inputbox">
+                    <label for="jrn">Job reference number</label>
+                    <input type="text"  id="jrn" pattern="[a-zA-Z0-9]{5}" required placeholder="Please enter 5 characters">
+                </div>
+                <div class="inputbox">
+                    <label for="fn">First name</label>
+                    <input type="text"  id="fn" maxlength="20" required>
+                </div>
+                <div class="inputbox">
+                    <label for="ln">Last name</label>
+                    <input type="text"  id="ln" maxlength="20" required>
+                </div>
+                <p class="p">Select your geder:</p>
+                <div class="inputbox">
+                    <label for="gender-male">Male</label>
+                    <input type="radio" name="gender" id="gm" value="male" required>
+                    <label for="gender-female">Female</label>
+                    <input type="radio" name="gender" id="gfm" value="female" required>
+                    <label for="other">Other</label>
+                    <input type="radio" name="gender" id="other" value="other" required>
+                </div>
+                <div class="inputbox">
+                    <label for="dob">Date of birth</label>
+                    <input type="text"  id="dob" placeholder="dd/mm/yyyy" pattern="\d{1,2}\/\d{1,2}\/\d{4}" >
+                </div>
+                <div class="inputbox">
+                    <label for="street">Street address</label>
+                    <input type="text" name="sa" id="sa" maxlength="40" required>
+                </div>
+                <div class="inputbox">
+                    <label for="s/t">Suburb/town</label>
+                    <input type="text" id="suburb" name="suburb" maxlength="40" required>
+                </div>
+                <div class="inputbox">
+                    <label for="State">State</label>
+                    <select name="state" id="state" required>
+                       <option value="">Please select</option>
+                       <option value="VIC">VIC</option>
+                       <option value="NSW">NSW</option>
+                       <option value="QLD">QLD</option>
+                       <option value="NT">NT</option>
+                       <option value="WA">WA</option>
+                       <option value="SA">SA</option>
+                       <option value="TAS">TAS</option>
+                       <option value="ACT">ACT</option>
+                     </select>
+                </div>
+                <div class="inputbox">
+                    <label for="Postcode">Postcode</label>
+                    <input type="text" name="PC" id="PC" pattern="[0-9]{4}" required placeholder="Please enter 4 numbers">
+                </div>
+                <div class="inputbox">
+                    <label for="Email">Email</label>
+                    <input type="email" name="Email" id="E" required>
+                </div>
+                <div class="inputbox">
+                    <label for="phonenumber">Phone number</label>
+                    <input type="tel" name="pnb" id="pnb" pattern="[\d\-+\s]{8,12}" required>
+                </div>
+                <p class="p">Please select the skills that apply to you. You can select multiple skills.</p>
+                <div class="inputbox">
+                    <label for="skill-1">Programming</label>
+                    <input type="checkbox" id="skill-1" name="skills[]" value="Programming">
+                 <br>
+                    <label for="skill-2">Data analysis</label>
+                    <input type="checkbox" id="skill-2" name="skills[]" value="Data analysis">
+                 <br>
+                    <label for="skill-3">Systems and networks</label>
+                    <input type="checkbox" id="skill-3" name="skills[]" value="Systems and networks">
+                </div>
+                <p class="p">Other skills</p>
+                <textarea name="otherskills" id="otherskills" cols="30" rows="10" placeholder="write down here"></textarea>
+            </div>
+             <button class="buttoncontainer" type="submit">Apply</button>
+        </form>
+
+    </div>
