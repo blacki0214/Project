@@ -1,962 +1,151 @@
-/* Importing Nunito font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
-
-/* Resetting default styles and applying Nunito font to the entire document */
-* {
-    margin: 0;
+*{
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
+    font-family: sans-serif;
 }
 
-/* Styling for the header section */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 100px;
-    background-color: black;
+body{
     display: flex;
-    justify-content: space-between;
-    z-index: 100;
-}
-
-/* Styling for header's h2 anchor */
-h2 a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-}
-
-/* Styling for logo text in the header */
-.Logo {
-    font-size: 20px;
-    color: white;
-}
-
-/* Styling for navigation links in the header */
-nav a {
-    position: relative;
-    font-size: 15px;
-    color: white;
-    text-decoration: none;
-    margin-left: 40px;
-}
-
-/* Styling for pseudo-element (line under navigation links) */
-nav a::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: white;
-    transition: .3s;
-}
-
-/* Animation for line under navigation links on hover */
-nav a:hover::before {
-    width: 100%;
-}
-
-/* Styling for the home section */
-.home {
-    min-height: 1080px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    position: relative;
-    z-index: 0;
-}
-
-/* Styling for content within the home section */
-.home .content {
-    text-align: center;
-}
-
-/* Styling for headings and paragraphs in the home section */
-.home .content h3 {
-    font-size: 70px;
-    color: white;
-    text-transform: uppercase;
-    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .1);
-}
-
-.home .content p {
-    font-size: 50px;
-    color: white;
-    padding: .5rem 0;
-}
-
-/* Styling for a button */
-.btn {
-    display: inline-block;
-    margin-top: 1px;
-    background: white;
-    color: black;
-    cursor: pointer;
-    font-size: 30px;
-    padding: .8rem .3rem;
-    border-radius: 150px;
-    text-decoration: none;
-}
-
-/* Button hover effect */
-.btn:hover {
-    background: rgb(0, 0, 0);
-    color: gray;
-}
-
-/* Styling for a specific element with ID 'job' */
-#job {
-    text-decoration: none;
-    color: white;
-}
-
-/* Styling for 'job' on hover */
-#job:hover {
-    color: gray;
-}
-
-/* Styling for a video container */
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-/* Styling for the footer section */
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Styling for a container */
-.container {
-    display: flex;
-    justify-content: center;
-    background-color: beige;
-}
-
-/* Styling for a card container */
-.card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    padding: 10px;
-}
-
-/* Styling for a card */
-.card {
-    width: 325px;
-    background-color: aqua;
-    border-radius: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    transition: transform 0.6s ease;
-}
-
-/* Card hover effect */
-.card:hover {
-    transform: translateY(-20px);
-}
-
-/* Styling for card images */
-.card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Styling for card content */
-.card-content {
-    padding: 20px;
-}
-
-/* Styling for card heading */
-.card-content h1 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-/* Styling for card paragraph */
-.card-content p {
-    font-size: 14px;
-    color: black;
-    margin-bottom: 20px;
-}
-
-/* Styling for card button */
-.card-button {
-    display: inline-block;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    padding: 8px 16px;
-}
-
-/* Styling for a specific element with ID 'data-science' */
-#data-science {
-    background-color: #fff;
-    padding: 100px;
-    margin: 20px;
-    text-align: left;
-}
-
-/* Styling for ordered and unordered lists */
-ol, ul {
-    text-align: left;
-}
-
-/* Styling for a button with class 'btn2' */
-.btn2 {
-    display: inline-block;
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    text-align: center;
-}
-
-/* Styling for an aside element */
-aside {
-    border: 4px inset purple;
-    border-radius: 14px;
-    margin: 100px;
-    padding: 1em;
-    width: auto;
-    float: right;
-    box-shadow: 10px 10px 5px #aaaaaa;
-    justify-content: center;
-}
-
-/* Styling for links within aside */
-aside a {
-    text-decoration: none;
-}
-
-/* Styling for a specific element with ID 'web-developer' */
-#web-developer {
-    background-color: #fff;
-    padding: 100px;
-    margin: 20px;
-    text-align: left;
-}
-
-/* Styling for the body of the application form */
-.applybody {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
-    background-image: linear-gradient(#380036, #0CBABA);
+    justify-content: center;
+    align-items: center;
+    background: url(backgroundimgapply.png);
+    background-size: cover;
 }
 
-/* Styling for a container within the application form */
-.Container {
+.container{
+    width: 100%;
     max-width: 650px;
+    background: rgba(0, 0, 0, 0.5);
     padding: 28px;
     margin: 0 28px;
     border-radius: 10px;
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+    box-shadow: inset -2px 2px 2px white;
 }
 
-/* Styling for an h2 element within the application form */
-.h2apply {
+.form-title{
     font-size: 26px;
-    font-weight: bold;
-    text-align: left;
-    color: #fff;
-    padding-bottom: 8px;
-    border-bottom: 1px solid silver;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 6px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    border-bottom: solid 1px white;
 }
 
-/* Styling for content within the application form */
-.Content {
+.main-user-info{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px 0;
 }
 
-/* Styling for input boxes within the application form */
-.inputbox {
+.user-input-box:nth-child(2n){
+    justify-content: end;
+}
+
+.user-input-box{
     display: flex;
     flex-wrap: wrap;
-    width: 65%;
+    width: 50%;
     padding-bottom: 15px;
 }
 
-/* Styling for labels within input boxes */
-.inputbox label {
-    color: #fff;
-    font-weight: bold;
-    margin: 2px 0;
+.user-input-box label{
+    width: 95%;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0;
 }
 
-/* Styling for paragraphs within input boxes */
-.p {
-    color: #fff;
-    font-weight: bold;
-    margin: 2px 0;
-    font-style: italic;
-}
-
-/* Styling for input elements within input boxes */
-.inputbox input {
-    padding: 0 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.user-input-box input{
+    height: 40px;
+    width: 95%;
+    border-radius: 7px;
     outline: none;
+    border: 1px solid grey;
+    padding: 0 10px;
+}
+.user-skill{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 20px 0;
+    
 }
 
-/* Styling for focused and valid input elements */
-.inputbox input:is(:focus, :valid) {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+
+.gender-title{
+    color:white;
+    font-size: 24px;
+    font-weight: 600;
+    border-bottom: 1px solid white;
 }
 
-/* Styling for a button container */
-.buttoncontainer {
+.gender-category{
+    margin: 15px 0;
+    color: white;
+}
+
+.gender-category label{
+    padding: 0 20px 0 5px;
+}
+
+.gender-category label,
+.gender-category input,
+.form-submit-btn input{
+    cursor: pointer;
+}
+
+.form-submit-btn{
+    margin-top: 40px;
+}
+
+.form-submit-btn input{
+    display: block;
     width: 100%;
     margin-top: 10px;
-    padding: 10px;
-    display: block;
     font-size: 20px;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    background-image: linear-gradient(to right, #aa076b, #61045f);
-    cursor: pointer;
-    transition: 0.3s;
+    padding: 10px;
+    border:none;
+    border-radius: 3px;
+    color: rgb(209, 209, 209);
+    background: rgba(63, 114, 76, 0.7);
 }
 
-/* Button container hover effect */
-.buttoncontainer:hover {
-    background-image: linear-gradient(to right, #61045f, #aa076b);
+.form-submit-btn input:hover{
+    background: rgba(56, 204, 93, 0.7);
+    color: rgb(255, 255, 255);
 }
 
-/* Media query for devices with a maximum width of 600px */
-@media (max-width: 600px) {
-    .container {
-        min-width: 280px;
+@media(max-width: 10000px){
+    .container{
+        min-width: 1000px;
     }
-    .content {
-        max-height: 380px;
-        overflow: auto;
-    }
-    .inputbox {
+
+    .user-input-box{
         margin-bottom: 12px;
         width: 100%;
     }
-}
 
-/* Media query for devices with a minimum width of 300px */
-@media (min-width: 300px) {
-    .navigation {
-        text-align: center;
+    .user-input-box:nth-child(2n){
+        justify-content: space-between;
     }
 
-    .aside {
-        justify-content: center;
+    .gender-category{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
-}
 
-/* Styling for the about section */
-.about {
-    margin-top: 100px;
-}
-
-/* Styling for h1 element within the about section */
-.about h1 {
-    text-align: center;
-    padding: 10px;
-}
-
-/* Styling for h2 elements within the about section */
-.about h2 {
-    padding: 10px;
-}
-
-/* Styling for definition lists */
-dl {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/* Styling for definition term within definition lists */
-dt {
-    flex-basis: 150px;
-    text-align: right;
-    margin-right: 10px;
-    font-weight: bold;
-}
-
-/* Styling for definition description within definition lists */
-dd {
-    flex-grow: 1;
-    margin: 0;
-}
-
-/* Styling for figures */
-figure {
-    float: right;
-    border: 1px solid black;
-    margin: 10px 0 10px 20px;
-    width: 20%;
-    text-align: center;
-}
-
-/* Styling for images within figures */
-figure img {
-    object-fit: cover;
-    max-width: 20%;
-}
-
-/* Styling for tables */
-table {
-    border-collapse: collapse;
-    margin: 20px 0;
-    width: 50%;
-}
-
-/* Styling for table elements */
-table, thead, tbody, tr, th, td {
-    border: 1px solid black;
-}
-
-/* Styling for table header and data cells */
-th, td {
-    padding: 10px;
-    margin: 20px 0;
-    width: 100%;
-    text-align: center;
-}
-
-/* Styling for table header */
-th {
-    font-weight: bold;
-}
-
-/* Styling for an email section */
-.email {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-/* Styling for definition term within email section */
-.email dt {
-    flex-basis: 100px;
-}
-
-/* Styling for definition description within email section */
-.email dd {
-    flex-grow: 1;
-}
-
-/* Styling for links within email section */
-.email a {
-    text-decoration: none;
-    color: black;
-}
-/* Importing Nunito font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
-
-/* Resetting default styles and applying Nunito font to the entire document */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
-}
-
-/* Styling for the header section */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 100px;
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    z-index: 100;
-}
-
-/* Styling for header's h2 anchor */
-h2 a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-}
-
-/* Styling for logo text in the header */
-.Logo {
-    font-size: 20px;
-    color: white;
-}
-
-/* Styling for navigation links in the header */
-nav a {
-    position: relative;
-    font-size: 15px;
-    color: white;
-    text-decoration: none;
-    margin-left: 40px;
-}
-
-/* Styling for pseudo-element (line under navigation links) */
-nav a::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: white;
-    transition: .3s;
-}
-
-/* Animation for line under navigation links on hover */
-nav a:hover::before {
-    width: 100%;
-}
-
-/* Styling for the home section */
-.home {
-    min-height: 1080px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    position: relative;
-    z-index: 0;
-}
-
-/* Styling for content within the home section */
-.home .content {
-    text-align: center;
-}
-
-/* Styling for headings and paragraphs in the home section */
-.home .content h3 {
-    font-size: 70px;
-    color: white;
-    text-transform: uppercase;
-    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .1);
-}
-
-.home .content p {
-    font-size: 50px;
-    color: white;
-    padding: .5rem 0;
-}
-
-/* Styling for a button */
-.btn {
-    display: inline-block;
-    margin-top: 1px;
-    background: white;
-    color: black;
-    cursor: pointer;
-    font-size: 30px;
-    padding: .8rem .3rem;
-    border-radius: 150px;
-    text-decoration: none;
-}
-
-/* Button hover effect */
-.btn:hover {
-    background: rgb(0, 0, 0);
-    color: gray;
-}
-
-/* Styling for a specific element with ID 'job' */
-#job {
-    text-decoration: none;
-    color: white;
-}
-
-/* Styling for 'job' on hover */
-#job:hover {
-    color: gray;
-}
-
-/* Styling for a video container */
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-/* Styling for the footer section */
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Styling for a container */
-.container {
-    display: flex;
-    justify-content: center;
-    background-color: beige;
-}
-
-/* Styling for a card container */
-.card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    padding: 10px;
-}
-
-/* Styling for a card */
-.card {
-    width: 325px;
-    background-color: aqua;
-    border-radius: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    transition: transform 0.6s ease;
-}
-
-/* Card hover effect */
-.card:hover {
-    transform: translateY(-20px);
-}
-
-/* Styling for card images */
-.card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Styling for card content */
-.card-content {
-    padding: 20px;
-}
-
-/* Styling for card heading */
-.card-content h1 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-/* Styling for card paragraph */
-.card-content p {
-    font-size: 14px;
-    color: black;
-    margin-bottom: 20px;
-}
-
-/* Styling for card button */
-.card-button {
-    display: inline-block;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    padding: 8px 16px;
-}
-
-/* Styling for a specific element with ID 'data-science' */
-#data-science {
-    background-color: #fff;
-    padding: 100px;
-    margin: 20px;
-    text-align: left;
-}
-
-/* Styling for ordered and unordered lists */
-ol, ul {
-    text-align: left;
-}
-
-/* Styling for a button with class 'btn2' */
-.btn2 {
-    display: inline-block;
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    text-align: center;
-}
-
-/* Styling for an aside element */
-aside {
-    border: 4px inset purple;
-    border-radius: 14px;
-    margin: 100px;
-    padding: 1em;
-    width: auto;
-    float: right;
-    box-shadow: 10px 10px 5px #aaaaaa;
-    justify-content: center;
-}
-
-/* Styling for links within aside */
-aside a {
-    text-decoration: none;
-}
-
-/* Styling for a specific element with ID 'web-developer' */
-#web-developer {
-    background-color: #fff;
-    padding: 100px;
-    margin: 20px;
-    text-align: left;
-}
-
-/* Styling for the body of the application form */
-.applybody {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: linear-gradient(#380036, #0CBABA);
-}
-
-/* Styling for a container within the application form */
-.Container {
-    max-width: 650px;
-    padding: 28px;
-    margin: 0 28px;
-    border-radius: 10px;
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
-}
-
-/* Styling for an h2 element within the application form */
-.h2apply {
-    font-size: 26px;
-    font-weight: bold;
-    text-align: left;
-    color: #fff;
-    padding-bottom: 8px;
-    border-bottom: 1px solid silver;
-}
-
-/* Styling for content within the application form */
-.Content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px 0;
-}
-
-/* Styling for input boxes within the application form */
-.inputbox {
-    display: flex;
-    flex-wrap: wrap;
-    width: 65%;
-    padding-bottom: 15px;
-}
-
-/* Styling for labels within input boxes */
-.inputbox label {
-    color: #fff;
-    font-weight: bold;
-    margin: 2px 0;
-}
-
-/* Styling for paragraphs within input boxes */
-.p {
-    color: #fff;
-    font-weight: bold;
-    margin: 2px 0;
-    font-style: italic;
-}
-
-/* Styling for input elements within input boxes */
-.inputbox input {
-    padding: 0 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    outline: none;
-}
-
-/* Styling for focused and valid input elements */
-.inputbox input:is(:focus, :valid) {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Styling for a button container */
-.buttoncontainer {
-    width: 100%;
-    margin-top: 10px;
-    padding: 10px;
-    display: block;
-    font-size: 20px;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    background-image: linear-gradient(to right, #aa076b, #61045f);
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-/* Button container hover effect */
-.buttoncontainer:hover {
-    background-image: linear-gradient(to right, #61045f, #aa076b);
-}
-
-/* Media query for devices with a maximum width of 600px */
-@media (max-width: 600px) {
-    .container {
-        min-width: 280px;
-    }
-    .content {
+    .main-user-info{
         max-height: 380px;
         overflow: auto;
     }
-    .inputbox {
-        margin-bottom: 12px;
-        width: 100%;
+
+    .main-user-info::-webkit-scrollbar{
+        width: 0;
     }
-}
-
-/* Media query for devices with a minimum width of 300px */
-@media (min-width: 300px) {
-    .navigation {
-        text-align: center;
-    }
-
-    .aside {
-        justify-content: center;
-    }
-}
-
-/* Styling for the about section */
-.about {
-    margin-top: 100px;
-}
-
-/* Styling for h1 element within the about section */
-.about h1 {
-    text-align: center;
-    padding: 10px;
-}
-
-/* Styling for h2 elements within the about section */
-.about h2 {
-    padding: 10px;
-}
-
-/* Styling for definition lists */
-dl {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/* Styling for definition term within definition lists */
-dt {
-    flex-basis: 150px;
-    text-align: right;
-    margin-right: 10px;
-    font-weight: bold;
-}
-
-/* Styling for definition description within definition lists */
-dd {
-    flex-grow: 1;
-    margin: 0;
-}
-
-/* Styling for figures */
-figure {
-    float: right;
-    border: 1px solid black;
-    margin: 10px 0 10px 20px;
-    width: 20%;
-    text-align: center;
-}
-
-/* Styling for images within figures */
-figure img {
-    object-fit: cover;
-    max-width: 20%;
-}
-
-/* Styling for tables */
-table {
-    border-collapse: collapse;
-    margin: 20px 0;
-    width: 50%;
-}
-
-/* Styling for table elements */
-table, thead, tbody, tr, th, td {
-    border: 1px solid black;
-}
-
-/* Styling for table header and data cells */
-th, td {
-    padding: 10px;
-    margin: 20px 0;
-    width: 100%;
-    text-align: center;
-}
-
-/* Styling for table header */
-th {
-    font-weight: bold;
-}
-
-/* Styling for an email section */
-.email {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-/* Styling for definition term within email section */
-.email dt {
-    flex-basis: 100px;
-}
-
-/* Styling for definition description within email section */
-.email dd {
-    flex-grow: 1;
-}
-
-/* Styling for links within email section */
-.email a {
-    text-decoration: none;
-    color: black;
 }
