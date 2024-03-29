@@ -1,86 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply page</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <meta charset="utf-8" />
+    <title>Responsive Registration Form</title>
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="applybody">
-    <header>
-        <h2 class="Logo"><a href="index.html">InnoGear</a></h2>
-        <nav class="navigation">
-            <a href="about.html">About</a>
-            <a href="apply.html">Apply</a>
-            <a href="jobs.html">Jobs</a>
-        </nav>
-    </header>
-    <div class="Container">
+
+<body>
+
+    <div class="container">
+        <h1 class="form-title">Application form</h1>
         <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
-            <h2 class="h2apply">Application form</h2>
-            <div class="content">
-                <div class="inputbox">
-                    <label for="jrn">Job reference number</label>
-                    <input type="text"  id="jrn" pattern="[a-zA-Z0-9]{5}" required placeholder="Please enter 5 characters">
+            <div class="main-user-info">
+                <div class="user-input-box">
+                    <label for="jrn">Job Reference Number</label>
+                    <input type="text" id="jrn" name="Job Reference Number" pattern="[a-zA-Z0-9]{5}" required
+                        placeholder="Please enter 5 characters" />
                 </div>
-                <div class="inputbox">
-                    <label for="fn">First name</label>
-                    <input type="text"  id="fn" maxlength="20" required>
+                <div class="user-input-box">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter Phone Number"
+                        pattern="[\d\-+\s]{8,12}" required />
                 </div>
-                <div class="inputbox">
-                    <label for="ln">Last name</label>
-                    <input type="text"  id="ln" maxlength="20" required>
+                <div class="user-input-box">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="First Name" maxlength="20" required />
                 </div>
-                <p class="p">Select your geder:</p>
-                <div class="inputbox">
-                    <label for="gender-male">Male</label>
-                    <input type="radio" name="gender" id="gm" value="male" required>
-                    <label for="gender-female">Female</label>
-                    <input type="radio" name="gender" id="gfm" value="female" required>
-                    <label for="other">Other</label>
-                    <input type="radio" name="gender" id="other" value="other" required>
+                <div class="user-input-box">
+                    <label for="LastName">Last Name</label>
+                    <input type="text" id="LastName" name="Last Name" maxlength="20" required />
                 </div>
-                <div class="inputbox">
+                <div class="user-input-box">
                     <label for="dob">Date of birth</label>
-                    <input type="text"  id="dob" placeholder="dd/mm/yyyy" pattern="\d{1,2}\/\d{1,2}\/\d{4}" >
+                    <input type="text" id="dob" name="Date of birth" placeholder="dd/mm/yyyy"
+                        pattern="\d{1,2}\/\d{1,2}\/\d{4}" />
                 </div>
-                <div class="inputbox">
+                <div class="user-input-box">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="Email" />
+                </div>
+                <div class="user-input-box">
                     <label for="street">Street address</label>
-                    <input type="text" name="sa" id="sa" maxlength="40" required>
+                    <input type="text" name="Street address" id="sa" maxlength="40" required>
                 </div>
-                <div class="inputbox">
+                <div class="user-input-box">
                     <label for="s/t">Suburb/town</label>
-                    <input type="text" id="suburb" name="suburb" maxlength="40" required>
+                    <input type="text" id="suburb" name="Suburb" maxlength="40" required>
                 </div>
-                <div class="inputbox">
+                <div class="user-input-box">
                     <label for="State">State</label>
                     <select name="state" id="state" required>
-                       <option value="">Please select</option>
-                       <option value="VIC">VIC</option>
-                       <option value="NSW">NSW</option>
-                       <option value="QLD">QLD</option>
-                       <option value="NT">NT</option>
-                       <option value="WA">WA</option>
-                       <option value="SA">SA</option>
-                       <option value="TAS">TAS</option>
-                       <option value="ACT">ACT</option>
-                     </select>
+                        <option value="">Please select</option>
+                        <option value="VIC">VIC</option>
+                        <option value="NSW">NSW</option>
+                        <option value="QLD">QLD</option>
+                        <option value="NT">NT</option>
+                        <option value="WA">WA</option>
+                        <option value="SA">SA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="ACT">ACT</option>
+                    </select>
                 </div>
-                <div class="inputbox">
+                <div class="user-input-box">
                     <label for="Postcode">Postcode</label>
-                    <input type="text" name="PC" id="PC" pattern="[0-9]{4}" required placeholder="Please enter 4 numbers">
+                    <input type="text" name="Postcode" id="PC" pattern="[0-9]{4}" required
+                        placeholder="Please enter 4 numbers">
                 </div>
-                <div class="inputbox">
-                    <label for="Email">Email</label>
-                    <input type="email" name="Email" id="E" required>
+                <div class="gender-details-box">
+                    <span class="gender-title">Gender</span>
+                    <div class="gender-category">
+                        <input type="radio" name="gender" id="male" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="other" value="other">
+                        <label for="other">Other</label>
+                    </div>
                 </div>
-                <div class="inputbox">
-                    <label for="phonenumber">Phone number</label>
-                    <input type="tel" name="pnb" id="pnb" pattern="[\d\-+\s]{8,12}" required>
-                </div>
-                <p class="p">Please select the skills that apply to you. You can select multiple skills.</p>
-                <div class="inputbox">
+                
+                <div class="user-skill">
                     <label for="skill-1">Programming</label>
                     <input type="checkbox" id="skill-1" name="skills[]" value="Programming">
                  <br>
@@ -90,10 +91,13 @@
                     <label for="skill-3">Systems and networks</label>
                     <input type="checkbox" id="skill-3" name="skills[]" value="Systems and networks">
                 </div>
-                <p class="p">Other skills</p>
-                <textarea name="otherskills" id="otherskills" cols="30" rows="10" placeholder="write down here"></textarea>
+                <textarea id="other-skill" name="other skill" rows="7" cols="50" placeholder="Enter any other skills you possess"></textarea>
             </div>
-             <button class="buttoncontainer" type="submit">Apply</button>
+            <div class="form-submit-btn">
+                <input type="submit" value="Apply">
+            </div>
         </form>
-
     </div>
+</body>
+
+</html>
