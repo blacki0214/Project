@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Responsive Registration Form</title>
+    <title>Application form</title>
     <meta name="viewport" content="width=device-width,
     initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
@@ -18,37 +18,37 @@
                 <div class="user-input-box">
                     <label for="jrn">Job Reference Number</label>
                     <input type="text" id="jrn" name="Job Reference Number" pattern="[a-zA-Z0-9]{5}" required
-                        placeholder="Please enter 5 characters" />
+                       value="Job Reference Number" placeholder="Please enter 5 characters" />
                 </div>
                 <div class="user-input-box">
                     <label for="phoneNumber">Phone Number</label>
                     <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter Phone Number"
-                        pattern="[\d\-+\s]{8,12}" required />
+                        pattern="[\d\-+\s]{8,12}" required value="Phone number" />
                 </div>
                 <div class="user-input-box">
                     <label for="firstname">First Name</label>
-                    <input type="text" id="firstname" name="First Name" maxlength="20" required />
+                    <input type="text" id="firstname" name="First Name" maxlength="20" required value="First name" />
                 </div>
                 <div class="user-input-box">
                     <label for="LastName">Last Name</label>
-                    <input type="text" id="LastName" name="Last Name" maxlength="20" required />
+                    <input type="text" id="LastName" name="Last Name" maxlength="20" required value="Last name"/>
                 </div>
                 <div class="user-input-box">
                     <label for="dob">Date of birth</label>
                     <input type="text" id="dob" name="Date of birth" placeholder="dd/mm/yyyy"
-                        pattern="\d{1,2}\/\d{1,2}\/\d{4}" />
+                        pattern="\d{1,2}\/\d{1,2}\/\d{4}" value="Date of birth" />
                 </div>
                 <div class="user-input-box">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="Email" />
+                    <input type="email" id="email" name="Email" value="Email" />
                 </div>
                 <div class="user-input-box">
                     <label for="street">Street address</label>
-                    <input type="text" name="Street address" id="sa" maxlength="40" required>
+                    <input type="text" name="Street address" id="sa" maxlength="40" required value="Street address"/>
                 </div>
                 <div class="user-input-box">
                     <label for="s/t">Suburb/town</label>
-                    <input type="text" id="suburb" name="Suburb" maxlength="40" required>
+                    <input type="text" id="suburb" name="Suburb" maxlength="40" required value="Suburb/Town"/>
                 </div>
                 <div class="user-input-box">
                     <label for="State">State</label>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="user-input-box">
                     <label for="Postcode">Postcode</label>
-                    <input type="text" name="Postcode" id="PC" pattern="[0-9]{4}" required
+                    <input type="text" name="Postcode" id="PC" pattern="[0-9]{4}" required value="Postcode"
                         placeholder="Please enter 4 numbers">
                 </div>
                 <div class="gender-details-box">
@@ -82,6 +82,8 @@
                 </div>
                 
                 <div class="user-skill">
+                    <label for="">Select your skill</label>
+                    <br>
                     <label for="skill-1">Programming</label>
                     <input type="checkbox" id="skill-1" name="skills[]" value="Programming">
                  <br>
