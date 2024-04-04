@@ -3,14 +3,22 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Application form</title>
+    <title>Application Form</title>
     <meta name="viewport" content="width=device-width,
     initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/formstyle.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 </head>
 
 <body>
-
+    <header>
+        <h2 class="Logo"><a href="index.html">InnoGear</a></h2>
+        <nav class="navigation">
+            <a href="about.html">About</a>
+            <a href="apply.html">Apply</a>
+            <a href="jobs.html">Jobs</a>
+        </nav>
+    </header>
     <div class="container">
         <h1 class="form-title">Application form</h1>
         <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
@@ -18,37 +26,37 @@
                 <div class="user-input-box">
                     <label for="jrn">Job Reference Number</label>
                     <input type="text" id="jrn" name="Job Reference Number" pattern="[a-zA-Z0-9]{5}" required
-                       value="Job Reference Number" placeholder="Please enter 5 characters" />
+                        placeholder="Please enter 5 characters" />
                 </div>
                 <div class="user-input-box">
                     <label for="phoneNumber">Phone Number</label>
                     <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter Phone Number"
-                        pattern="[\d\-+\s]{8,12}" required value="Phone number" />
+                        pattern="[\d\-+\s]{8,12}" required  />
                 </div>
                 <div class="user-input-box">
                     <label for="firstname">First Name</label>
-                    <input type="text" id="firstname" name="First Name" maxlength="20" required value="First name" />
+                    <input type="text" id="firstname" name="First Name" maxlength="20" required >
                 </div>
                 <div class="user-input-box">
                     <label for="LastName">Last Name</label>
-                    <input type="text" id="LastName" name="Last Name" maxlength="20" required value="Last name"/>
+                    <input type="text" id="LastName" name="Last Name" maxlength="20" required />
                 </div>
                 <div class="user-input-box">
                     <label for="dob">Date of birth</label>
                     <input type="text" id="dob" name="Date of birth" placeholder="dd/mm/yyyy"
-                        pattern="\d{1,2}\/\d{1,2}\/\d{4}" value="Date of birth" />
+                        pattern="\d{1,2}\/\d{1,2}\/\d{4}" />
                 </div>
                 <div class="user-input-box">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="Email" value="Email" />
+                    <input type="email" id="email" name="Email" />
                 </div>
                 <div class="user-input-box">
                     <label for="street">Street address</label>
-                    <input type="text" name="Street address" id="sa" maxlength="40" required value="Street address"/>
+                    <input type="text" name="Street address" id="sa" maxlength="40" required />
                 </div>
                 <div class="user-input-box">
                     <label for="s/t">Suburb/town</label>
-                    <input type="text" id="suburb" name="Suburb" maxlength="40" required value="Suburb/Town"/>
+                    <input type="text" id="suburb" name="Suburb" maxlength="40" required />
                 </div>
                 <div class="user-input-box">
                     <label for="State">State</label>
@@ -66,7 +74,7 @@
                 </div>
                 <div class="user-input-box">
                     <label for="Postcode">Postcode</label>
-                    <input type="text" name="Postcode" id="PC" pattern="[0-9]{4}" required value="Postcode"
+                    <input type="text" name="Postcode" id="PC" pattern="[0-9]{4}" required 
                         placeholder="Please enter 4 numbers">
                 </div>
                 <div class="gender-details-box">
@@ -99,7 +107,11 @@
                 <input type="submit" value="Apply">
             </div>
         </form>
-    </div>
+        
+    </div> 
+    <footer>
+        <p>Contact us via email: 104198640@student.swin.edu.au and 105000908@student.swin.edu.au</p>
+    </footer>
 </body>
 
 </html>
